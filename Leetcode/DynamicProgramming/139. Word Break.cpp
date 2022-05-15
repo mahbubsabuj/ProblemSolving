@@ -10,9 +10,10 @@ public:
                 int m = (int) word.size();
                 if (i - m >= 0 && dp[i - m] && s.substr(i - m, m) == word) {
                     dp[i] = true;
+                    break;
                 }
             }
         }
         return dp[n];
     }
-};
+}
