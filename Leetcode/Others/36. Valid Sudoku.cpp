@@ -34,7 +34,7 @@ public:
         for (int j = 0; j < m; ++j) {
             int cnt[10];
             fill(cnt, cnt + 10, 0);
-            for (int i = 0; i < n; ++i) {
+            for (int i = 0; i < n; ++i) {
                 if (grid[i][j] >= '0' && grid[i][j] <= '9') {
                     ++cnt[grid[i][j] - '0'];
                     if (cnt[grid[i][j] - '0'] > 1) return false;
