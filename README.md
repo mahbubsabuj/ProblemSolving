@@ -2,7 +2,7 @@
 
 
 <p align="center">
-    <img align="center" alt="visitors" src="![Codeforces Stats Card](https://codeforces-stats-api.herokuapp.com/stats?username=newb_ie&theme=2)" />
+    <img align="center" alt="visitors" src=![Codeforces Stats Card](https://codeforces-stats-api.herokuapp.com/stats?username=newb_ie&theme=2) />
 </p>
 
 <h1 align="center">LEETCODE STATS</h1>
