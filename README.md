@@ -1,6 +1,6 @@
 <h1 align="center">CODEFORCES STATS</h1>
 
-![Codeforces Stats Card](https://codeforces-stats-api.herokuapp.com/stats?username=newb_ie&theme=1)
+![Codeforces Stats Card](https://codeforces-stats-api.herokuapp.com/stats?username=newb_ie&theme=2)
 
 <h1 align="center">LEETCODE STATS</h1>
 
