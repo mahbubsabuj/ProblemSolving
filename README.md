@@ -1,9 +1,7 @@
 <h1 align="center">CODEFORCES STATS</h1>
 
 
-<div align="center>
-    ![Codeforces Stats Card](https://codeforces-stats-api.herokuapp.com/stats?username=newb_ie&theme=2)
-</div>
+![Codeforces Stats Card](https://codeforces-stats-api.herokuapp.com/stats?username=newb_ie&theme=2)
 
 <h1 align="center">LEETCODE STATS</h1>
 
