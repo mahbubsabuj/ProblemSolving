@@ -1,6 +1,9 @@
 <h1 align="center">CODEFORCES STATS</h1>
 
-<img align = "center" src={![Codeforces Stats Card](https://codeforces-stats-api.herokuapp.com/stats?username=newb_ie&theme=2)} />
+
+<p align="center">
+    <img align="center" alt="visitors" src="![Codeforces Stats Card](https://codeforces-stats-api.herokuapp.com/stats?username=newb_ie&theme=2)" />
+</p>
 
 <h1 align="center">LEETCODE STATS</h1>
 
