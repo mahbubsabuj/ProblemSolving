@@ -1,10 +1,11 @@
 #include <iostream>
 using std::string;
 
-class Employee {
-//Encapsulation :
-//is the idea of bundling data and methods inside the class.
-//anybody who needs to change the data have to go through user defined methods to modify certain data
+class AbstructEmployee{
+	virtual void AskForPromotion() = 0;
+};
+
+class Employee: AbstructEmployee {
 //Abstruction:
 //Hiding complex logic
 private:
@@ -38,11 +39,21 @@ public:
 	void IntroduceYourself() {
 		std::cout << "Hello, My name is " << Name << " I work for " << Company << " & My Age is " << Age << std::endl;
 	}
+	void AskForPromotion() {
+		if (Age > 30) {
+			std::cout << Name << " Got promoted!" << std::endl;
+		} else {
+			std::cout << Name << ", sorry NO promotion for You!" << std::endl;
+		}
+	}
 };
 
 int main () {
 	Employee employee1("Mahbubul Alam", "_", 25);
 	employee1.IntroduceYourself();
 	employee1.setName("Mahbubul Alam Sabuj");
-	std::cout << employee1.getName();
+	std::cout << employee1.getName() << std::endl;
+	employee1.AskForPromotion();
+	Employee employee2("John Doe", "DSoft", 32);
+	employee2.AskForPromotion();
 }
