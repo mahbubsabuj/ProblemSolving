@@ -75,4 +75,6 @@ int main () {
 	 printInorder(root);
 	 cout << "\nPostorder:\n";
 	 printPostorder(root);
+	 cout << "\nLevel Order: \n";
+	 levelOrderTravarsal(root);
 }
