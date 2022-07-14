@@ -2,8 +2,8 @@
 
 using namespace std;
 
-//~ 1. Pick element from preorder & create a node
-//~ 2. Increment preorder idx
+//~ 1. Pick element from end of postorder & create a node
+//~ 2. Decrement postorder idx
 //~ 3. Search for picked element's position in inorder
 //~ 4. Call to build left subtree from inorder's from 0 to pos - 1
 //~ 5. Call to build right subtree from inorder's pos + 1 to n
@@ -20,23 +20,24 @@ class TreeNode {
 		}
 };
 
-TreeNode* Build(vector<int> & preorder, vector<int> &inorder, int l, int r) {
-	static int idx = 0;
+TreeNode* Build(vector<int> & postorder, vector<int> &inorder, int l, int r) {
+	static int idx = (int) postorder.size() - 1;
 	if (l > r) return nullptr;
-	TreeNode* root = new TreeNode(preorder[idx++]);
+	TreeNode* root = new TreeNode(postorder[idx--]);
 	int inorder_idx = -1;
 	for (int i = l; i <= r; ++i) {
-		if (inorder[i] == preorder[idx - 1]) {
+		if (inorder[i] == postorder[idx + 1]) {
 			inorder_idx = i;
 			break;
 		}
 	}
-    if (inorder_idx == -1) {
-        //invalid preorder and inorder sequence
-        assert(false);
-    }
-	root->left = Build(preorder, inorder, l, inorder_idx - 1);
-	root->right = Build(preorder, inorder, inorder_idx + 1, r);
+	if (inorder_idx == -1) {
+		//invalid postorder and inorder sequence
+		assert(false);
+	}
+	root->right = Build(postorder, inorder, inorder_idx + 1, r);
+	root->left = Build(postorder, inorder, l, inorder_idx - 1);
+	
 	return root;
 } 
 
@@ -65,9 +66,9 @@ void printPostorder(TreeNode* root) {
 }
 
 int main () {
-	 vector<int> preorder = {1, 2, 4, 3, 5};
+	 vector<int> postorder = {4, 2, 5, 3, 1};
 	 vector<int> inorder = {4, 2, 1, 5, 3};
-	 TreeNode* root = Build(preorder, inorder, 0, (int) preorder.size() - 1);
+	 TreeNode* root = Build(postorder, inorder, 0, (int) postorder.size() - 1);
 	 cout << "Preorder:\n";
 	 printPreorder(root);
 	 cout << "\nInorder:\n";
